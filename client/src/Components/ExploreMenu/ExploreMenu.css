@@ -1,0 +1,141 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 500;
+    font-size: max(4vw, 22px); /* Responsive font size */
+}
+
+.explore-menu-text {
+    max-width: 60%;
+    color: #808080;
+    font-size: max(1.2vw, 14px); /* Adjust font size */
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll; /* Horizontal scroll on smaller screens */
+    padding-bottom: 10px;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+}
+
+.explore-menu hr {
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.explore-menu-list-item .active {
+    border: 4px solid tomato;
+    padding: 2px;
+}
+
+/* Responsive Design for Different Screen Sizes */
+
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .explore-menu h1 {
+        font-size: max(3.5vw, 20px);
+    }
+
+    .explore-menu-list-item img {
+        width: 8vw;
+        min-width: 60px; /* Reduce image size on smaller screens */
+    }
+
+    .explore-menu-list-item p {
+        font-size: max(1.8vw, 14px);
+    }
+
+    .explore-menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .explore-menu h1 {
+        font-size: max(4.5vw, 18px);
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: max(2vw, 12px);
+    }
+
+    .explore-menu-list {
+        gap: 20px;
+        padding-bottom: 15px;
+    }
+
+    .explore-menu-list-item img {
+        width: 9vw;
+        min-width: 50px; /* Further reduce image size */
+    }
+
+    .explore-menu-list-item p {
+        font-size: max(2.5vw, 12px); /* Smaller font for captions */
+    }
+}
+
+@media (max-width: 400px) {
+    .explore-menu h1 {
+        font-size: max(5.5vw, 16px);
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: max(2.5vw, 10px);
+    }
+
+    .explore-menu-list {
+        gap: 15px;
+    }
+
+    .explore-menu-list-item img {
+        width: 10vw;
+        min-width: 45px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: max(3vw, 10px);
+    }
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr; /* This adds white space on both sides */
+    padding: 0 20px; /* Add padding for smaller screens */
+}

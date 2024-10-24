@@ -1,0 +1,144 @@
+.food-display {
+    margin-top: 30px;
+    padding: 0 15px; /* Added padding for better layout on smaller screens */
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px); /* Responsive heading size */
+    font-weight: 600;
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 items per row */
+    gap: 30px; /* Unified gap for both row and column */
+    row-gap: 50px; /* Extra row gap for vertical spacing */
+    justify-items: center; /* Center the food items in each grid column */
+    padding-bottom: 30px; /* Added padding at the bottom for spacing */
+}
+
+/* Styling for individual food items */
+.food-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info {
+    padding: 20px;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+
+.food-item-desc {
+    color: #676767;
+    font-size: 12px;
+}
+
+.food-item-price {
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+/* Container for food item image and 'add to cart' button */
+.food-item-img-container {
+    position: relative;
+}
+
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.food-item-counter img {
+    width: 30px;
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 1050px) {
+    .food-display-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on medium-sized devices */
+        gap: 25px;
+    }
+}
+
+/* Responsive adjustments for small tablets and phones */
+@media (max-width: 768px) {
+    .food-display-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller tablets and phones */
+        gap: 20px;
+        row-gap: 40px;
+    }
+
+    .food-item-name-rating p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+    .food-display-list {
+        grid-template-columns: 1fr; /* 1 item per row on mobile phones */
+        gap: 15px;
+        row-gap: 30px;
+    }
+
+    .food-item-name-rating p {
+        font-size: 16px; /* Further reduce font size for mobile */
+    }
+
+    .food-item-price {
+        font-size: 18px; /* Smaller price font size for mobile */
+    }
+
+    .food-item-desc {
+        font-size: 10px; /* Smaller description text on mobile */
+    }
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr; /* This adds white space on both sides */
+    padding: 0 20px; /* Add padding for smaller screens */
+}

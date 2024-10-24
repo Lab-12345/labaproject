@@ -1,0 +1,123 @@
+/* Base styles for login popup */
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.56); /* Semi-transparent black overlay */
+    display: grid;
+}
+
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px); /* Responsive width with minimum value */
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s; /* Smooth fade-in animation */
+}
+
+/* Mobile-Responsive styles */
+@media (max-width: 600px) {
+    .login-popup-container {
+        width: 90%; /* Take more width on smaller screens */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .login-popup-container button {
+        padding: 12px; /* Slightly larger button on mobile */
+    }
+
+    .login-popup-title img {
+        width: 14px; /* Slightly smaller close icon */
+    }
+
+    .login-popup-inputs input {
+        padding: 12px; /* Adjust input field padding for touch screens */
+    }
+
+    .login-popup-condition p {
+        font-size: 12px; /* Slightly smaller text for terms */
+    }
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: #808080; /* Focus border color */
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-popup-container button:hover {
+    background-color: #d3472f; /* Slightly darker on hover */
+}
+
+.login-popup-condition {
+    
+    gap: 2px;
+    margin-top: -5px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+.login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-popup p span:hover {
+    color: #d3472f; /* Slightly darker on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

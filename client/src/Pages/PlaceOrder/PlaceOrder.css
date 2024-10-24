@@ -1,0 +1,87 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px; /* Space around the form */
+}
+
+.place-order-left {
+  width: 60%; /* Left section width */
+  padding: 20px;
+  border-right: 1px solid #e1e1e1; /* Separator line */
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Space below title */
+}
+
+.multi-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between fields */
+  margin-bottom: 15px; /* Space below each row */
+}
+
+input {
+  width: 100%; /* Full width of the input */
+  padding: 12px; /* Padding inside the input */
+  border: 1px solid #ddd; /* Input border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+input:focus {
+  border-color: #007bff; /* Border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.cart-summary {
+  width: 35%; /* Cart summary section width */
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background for contrast */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem; /* Title font size */
+  margin-bottom: 15px; /* Space below the title */
+  color: #333; /* Dark text color */
+}
+
+.cart-summary ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.cart-summary li {
+  display: flex;
+  justify-content: space-between; /* Align item and price */
+  margin-bottom: 10px; /* Space below each item */
+}
+
+strong {
+  font-weight: bold; /* Strong text weight */
+}
+
+.cart-summary p {
+  margin: 10px 0; /* Space above and below each paragraph */
+  font-size: 1rem; /* Font size */
+}
+
+button {
+  margin-top: 10px; /* Space above button */
+  padding: 12px 15px; /* Padding inside button */
+  background-color: tomato; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor change on hover */
+  font-size: 1rem; /* Font size */
+  width: 100%; /* Full width button */
+}
+
+button:hover {
+  background-color: tomato; /* Darken button on hover */
+}
